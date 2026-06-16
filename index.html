@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GH Desirable Services — Clothing, Branding & Printing in Krugersdorp</title>
+<meta name="description" content="GH Desirable Services offers premium clothing via Citayanos, textile solutions, branding, and custom printing in Krugersdorp. Empowering youth and businesses across Gauteng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c14;
+  --surface:#0f1520;
+  --card:#141b2d;
+  --primary:#f5c518;
+  --primary-dim:rgba(245,197,24,0.12);
+  --primary-glow:rgba(245,197,24,0.25);
+  --text:#e8eaf0;
+  --muted:#7a8499;
+  --border:rgba(245,197,24,0.15);
+  --wa:#25D366;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;overflow-x:hidden;line-height:1.6}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px}
+
+/* NAVBAR */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;transition:background .3s,backdrop-filter .3s}
+nav.scrolled{background:rgba(8,12,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo svg{width:38px;height:38px}
+.nav-logo span{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--primary);letter-spacing:1px}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--primary);transition:width .25s}
+.nav-links a:hover{color:var(--primary)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--primary);color:#000;padding:10px 22px;border-radius:6px;font-weight:700;font-size:.875rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:scale(1.04);box-shadow:0 0 20px var(--primary-glow)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:24px;height:2px;background:var(--text);transition:.3s}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(8,12,20,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-nav.open{display:flex}
+.mobile-nav a{color:var(--text);font-size:1.5rem;font-weight:700;text-decoration:none;font-family:'Bebas Neue',sans-serif;letter-spacing:2px}
+.mobile-nav a:hover{color:var(--primary)}
+.mobile-close{position:absolute;top:24px;right:24px;font-size:2rem;color:var(--muted);cursor:pointer;background:none;border:none}
+
+/* HERO */
+#hero{position:relative;height:100dvh;min-height:600px;display:flex;align-items:center;overflow:hidden}
+#hero-canvas{position:absolute;inset:0;z-index:0}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:1}
+.orb1{width:500px;height:500px;background:rgba(245,197,24,.08);top:-100px;right:-100px;animation:drift1 20s ease-in-out infinite}
+.orb2{width:350px;height:350px;background:rgba(245,197,24,.05);bottom:-80px;left:-80px;animation:drift2 25s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
+.hero-inner{position:relative;z-index:2;padding:0 5%;max-width:800px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--primary-dim);border:1px solid var(--border);padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:600;color:var(--primary);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+.hero-tag svg{width:14px;height:14px;fill:var(--primary)}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6.5rem);line-height:.95;letter-spacing:2px;margin-bottom:20px}
+h1 span{color:var(--primary)}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:520px;margin-bottom:36px;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--primary);color:#000;padding:14px 32px;border-radius:8px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 8px 30px var(--primary-glow)}
+.btn-ghost{border:1.5px solid var(--primary);color:var(--primary);padding:14px 32px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-ghost:hover{background:var(--primary-dim);transform:scale(1.04)}
+.scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-size:.7rem;letter-spacing:2px;text-transform:uppercase}
+.scroll-arrow{width:20px;height:20px;border-right:2px solid var(--primary);border-bottom:2px solid var(--primary);transform:rotate(45deg);animation:scrollBounce 1.8s ease-in-out infinite}
+@keyframes scrollBounce{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.4}50%{transform:rotate(45deg) translate(4px,4px);opacity:1}}
+
+/* STICKY MOBILE BAR */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--surface);border-top:1px solid var(--border);padding:12px 5%;justify-content:space-between;align-items:center}
+.sticky-bar a{flex:1;text-align:center;padding:10px;border-radius:6px;font-weight:700;font-size:.85rem;text-decoration:none}
+.sticky-bar .s-call{background:var(--primary);color:#000;margin-right:8px}
+.sticky-bar .s-wa{background:#25D366;color:#fff}
+
+/* STATS */
+#stats{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat-item{text-align:center;padding:24px 16px;position:relative}
+.stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--border)}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5vw,3.5rem);color:var(--primary);line-height:1;display:block}
+.stat-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+
+/* SECTION COMMON */
+section{padding:100px 5%}
+.section-wave{width:100%;overflow:hidden;line-height:0;margin-bottom:-2px}
+.section-wave svg{display:block;width:100%}
+.section-tag{font-size:.7rem;font-weight:700;color:var(--primary);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.section-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:1px;line-height:1.05;margin-bottom:16px}
+.section-heading span{color:var(--primary)}
+.section-sub{color:var(--muted);max-width:540px;font-weight:300;font-size:.95rem}
+.accent-line{width:0;height:3px;background:var(--primary);border-radius:2px;margin:20px 0;transition:none}
+.accent-line.animated{animation:drawLine .7s ease-out forwards}
+@keyframes drawLine{to{width:60px}}
+
+/* SERVICES */
+#services{background:var(--bg)}
+.services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:24px;flex-wrap:wrap}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px 28px;cursor:pointer;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,var(--primary-dim),transparent 70%);opacity:0;transition:opacity .3s}
+.service-card:hover{transform:translateY(-6px);border-color:var(--primary);box-shadow:0 12px 40px var(--primary-glow)}
+.service-card:hover::before{opacity:1}
+.service-card:hover .svc-icon{animation:iconBounce .4s ease}
+@keyframes iconBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.svc-num{font-family:'Bebas Neue',sans-serif;font-size:.85rem;color:var(--primary);letter-spacing:2px;margin-bottom:16px;opacity:.7}
+.svc-icon{width:48px;height:48px;margin-bottom:20px;color:var(--primary)}
+.svc-icon svg{width:48px;height:48px;stroke:var(--primary);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:10px}
+.svc-desc{color:var(--muted);font-size:.875rem;line-height:1.7;margin-bottom:20px}
+.svc-price{font-size:.8rem;color:var(--primary);font-weight:600;margin-bottom:16px}
+.svc-cta{font-size:.8rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:6px;text-decoration:none}
+.svc-cta::after{content:'→';transition:transform .2s}
+.service-card:hover .svc-cta::after{transform:translateX(4px)}
+
+/* ABOUT */
+#about{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-copy p{color:var(--muted);font-weight:300;margin-bottom:16px;font-size:.95rem;line-height:1.8}
+.trust-badges{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.badge{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;align-items:center;gap:12px}
+.badge-icon{width:36px;height:36px;background:var(--primary-dim);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-icon svg{width:18px;height:18px;stroke:var(--primary);fill:none;stroke-width:2}
+.badge-text strong{display:block;font-size:.85rem;font-weight:700}
+.badge-text span{font-size:.75rem;color:var(--muted)}
+.about-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.about-svg-wrap{width:100%;max-width:400px}
+
+/* HOW IT WORKS */
+#process{background:var(--bg)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:60px}
+.process-line{position:absolute;top:32px;left:12.5%;right:12.5%;height:2px;background:var(--border);z-index:0}
+.process-svg-line{position:absolute;top:32px;left:12.5%;width:75%;height:2px;overflow:visible}
+.process-svg-line path{stroke:var(--primary);stroke-width:2;fill:none;stroke-dasharray:1000;stroke-dashoffset:1000;transition:none}
+.process-svg-line path.drawn{animation:drawPath 1.2s ease-out forwards}
+@keyframes drawPath{to{stroke-dashoffset:0}}
+.step{text-align:center;padding:0 16px;position:relative;z-index:1}
+.step-num{width:64px;height:64px;border-radius:50%;background:var(--card);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--primary);transition:border-color .3s,background .3s}
+.step.active .step-num,.step-num:hover{border-color:var(--primary);background:var(--primary-dim)}
+.step-icon{width:28px;height:28px;stroke:var(--primary);fill:none;stroke-width:1.8;margin-bottom:12px}
+.step h4{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:1px;margin-bottom:8px}
+.step p{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--surface)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px 28px;position:relative;overflow:hidden}
+.testi-card::before{content:'"';position:absolute;top:-10px;right:20px;font-size:8rem;color:var(--primary);opacity:.06;font-family:'Bebas Neue',sans-serif;line-height:1}
+.stars{display:flex;gap:4px;margin-bottom:16px}
+.star{width:16px;height:16px;fill:var(--primary)}
+.testi-quote{color:var(--muted);font-size:.875rem;line-height:1.8;margin-bottom:20px;font-style:italic}
+.testi-author strong{display:block;font-size:.875rem;font-weight:700}
+.testi-author span{font-size:.75rem;color:var(--muted)}
+
+/* FAQ */
+#faq{background:var(--bg)}
+.faq-wrap{max-width:720px;margin:60px auto 0}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--text);text-align:left;padding:20px 0;font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q:hover{color:var(--primary)}
+.faq-chevron{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:2;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:20px}
+.faq-a p{color:var(--muted);font-size:.875rem;line-height:1.8}
+
+/* CONTACT */
+#contact{background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;margin-bottom:24px}
+.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.contact-icon{width:40px;height:40px;background:var(--primary-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:18px;height:18px;stroke:var(--primary);fill:none;stroke-width:2}
+.contact-item-text strong{display:block;font-size:.85rem;font-weight:700;margin-bottom:2px}
+.contact-item-text span{font-size:.8rem;color:var(--muted)}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 24px;border-radius:8px;font-weight:700;text-decoration:none;margin-top:24px;transition:transform .2s,box-shadow .2s}
+.wa-btn:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.wa-btn svg{width:20px;height:20px;fill:#fff}
+.form-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:36px 32px}
+.form-box h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--text);font-family:'Inter',sans-serif;font-size:.875rem;transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-dim)}
+.form-group input.error,.form-group select.error,.form-group textarea.error{border-color:#e74c3c}
+.form-group .err-msg{color:#e74c3c;font-size:.72rem;margin-top:4px;display:none}
+.form-group.has-error .err-msg{display:block}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group select option{background:var(--card)}
+.btn-submit{width:100%;background:var(--primary);color:#000;border:none;padding:15px;border-radius:8px;font-weight:700;font-size:.95rem;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:8px}
+.btn-submit:hover{transform:scale(1.02);box-shadow:0 8px 24px var(--primary-glow)}
+.trust-note{text-align:center;font-size:.75rem;color:var(--muted);margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success svg{width:56px;height:56px;stroke:#25D366;fill:none;stroke-width:1.5;margin-bottom:16px}
+.form-success h4{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:8px;color:#25D366}
+.form-success p{color:var(--muted);font-size:.875rem}
+
+/* FOOTER */
+footer{background:var(--card);border-top:1px solid var(--border);padding:60px 5% 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+.footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.8;margin:12px 0 20px}
+.footer-socials{display:flex;gap:12px}
+.social-link{width:38px;height:38px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:border-color .2s,background .2s}
+.social-link:hover{border-color:var(--primary);background:var(--primary-dim)}
+.social-link svg{width:18px;height:18px;fill:var(--text)}
+.footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--primary);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--primary)}
+.footer-bottom{padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted);flex-wrap:wrap;gap:8px}
+.footer-bottom a{color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-bottom a:hover{color:var(--primary)}
+.admin-link{opacity:.3;font-size:.7rem;cursor:pointer;background:none;border:none;color:var(--muted)}
+.admin-link:hover{opacity:1;color:var(--primary)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:88px;right:24px;z-index:800;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-float::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid #25D366;animation:waPulse 2s infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+
+/* ADMIN MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;width:100%;max-width:900px;max-height:90vh;overflow:auto;position:relative}
+.modal-header{padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--surface);z-index:1}
+.modal-header h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px}
+.modal-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.4rem;padding:4px}
+.modal-close:hover{color:var(--text)}
+.modal-body{padding:28px}
+.admin-login{max-width:340px;margin:0 auto;text-align:center}
+.admin-login p{color:var(--muted);margin-bottom:20px;font-size:.875rem}
+.admin-login input{width:100%;background:var(--card);border:1.5px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--text);font-size:.9rem;margin-bottom:12px;text-align:center}
+.admin-login input:focus{outline:none;border-color:var(--primary)}
+.admin-err{color:#e74c3c;font-size:.8rem;margin-top:4px;min-height:18px}
+.crm-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:gap}
+.crm-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.crm-stat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 18px;font-size:.85rem}
+.crm-stat strong{color:var(--primary);font-size:1.2rem;display:block}
+.crm-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.btn-sm{padding:8px 16px;border-radius:6px;font-size:.8rem;font-weight:600;cursor:pointer;border:none;transition:.2s}
+.btn-export{background:var(--primary);color:#000}
+.btn-export:hover{opacity:.9}
+.btn-clear{background:rgba(231,76,60,.15);color:#e74c3c;border:1px solid rgba(231,76,60,.3)}
+.btn-clear:hover{background:rgba(231,76,60,.25)}
+.leads-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.leads-table th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:.72rem}
+.leads-table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle}
+.leads-table tr:hover td{background:rgba(255,255,255,.02)}
+.status-badge{padding:3px 10px;border-radius:20px;font-size:.7rem;font-weight:700;text-transform:uppercase}
+.s-new{background:rgba(245,197,24,.15);color:var(--primary)}
+.s-contacted{background:rgba(52,152,219,.15);color:#3498db}
+.s-quoted{background:rgba(155,89,182,.15);color:#9b59b6}
+.s-won{background:rgba(39,174,96,.15);color:#27ae60}
+.s-lost{background:rgba(231,76,60,.15);color:#e74c3c}
+.status-sel{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:4px 8px;color:var(--text);font-size:.75rem;cursor:pointer}
+.del-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.85rem;padding:4px 8px;border-radius:4px}
+.del-btn:hover{color:#e74c3c;background:rgba(231,76,60,.1)}
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:.875rem}
+
+/* REVEAL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.08s}
+.reveal-delay-2{transition-delay:.16s}
+.reveal-delay-3{transition-delay:.24s}
+.reveal-delay-4{transition-delay:.32s}
+.reveal-delay-5{transition-delay:.40s}
+.reveal-delay-6{transition-delay:.48s}
+
+@media(max-width:900px){
+  .services-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-visual{display:none}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .process-line,.process-svg-line{display:none}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2)::after{display:none}
+  .form-row{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .sticky-bar{display:flex}
+  body{padding-bottom:64px}
+  section{padding:72px 5%}
+  .services-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .wa-float{bottom:90px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="38" height="38" rx="8" fill="#f5c518"/>
+      <text x="5" y="26" font-family="Arial Black" font-weight="900" font-size="18" fill="#000">GH</text>
+    </svg>
+    <span>GH Desirable</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/27679800187?text=Hi%2C%20I%27d%20like%20a%20quote%20from%20GH%20Desirable%20Services" class="nav-cta" target="_blank" rel="noopener">Get Quote</a>
+  <div class="burger" id="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#process" onclick="toggleMenu()">Process</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="https://wa.me/27679800187" target="_blank" rel="noopener" style="color:#25D366">WhatsApp Us</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <svg viewBox="0 0 14 14"><polygon points="7,1 9,5 13,5.5 10,8.5 10.8,13 7,10.8 3.2,13 4,8.5 1,5.5 5,5" stroke="#f5c518" stroke-width="1" fill="#f5c518"/></svg>
+      Est. 2017 · Kagiso, Krugersdorp
+    </div>
+    <h1>Wear Your<br><span>Identity.</span><br>Print Your Brand.</h1>
+    <p class="hero-sub">Premium clothing, textile solutions, custom branding & printing for youth, businesses, and artists across Gauteng.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Get a Free Quote
+      </a>
+      <a href="https://wa.me/27679800187?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GH%20Desirable%20Services" target="_blank" rel="noopener" class="btn-ghost">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--bg)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#0f1520"/>
+  </svg>
+</div>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num" data-target="7" data-suffix="+">0</span>
+      <span class="stat-label">Years Active</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-num" data-target="500" data-suffix="+">0</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-num" data-target="4" data-suffix="">0</span>
+      <span class="stat-label">Core Services</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <span class="stat-num" data-target="98" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Rate</span>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--surface)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#080c14"/>
+  </svg>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <p class="section-tag">What We Do</p>
+      <h2 class="section-heading reveal">Everything You Need<br><span>Under One Roof</span></h2>
+      <div class="accent-line reveal"></div>
+    </div>
+    <p class="section-sub reveal" style="text-align:right">From streetwear to corporate uniforms — we design, print and deliver with quality you can feel.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><path d="M24 8c-4 0-8 4-8 8s4 8 8 8 8-4 8-8-4-8-8-8z"/><path d="M8 40c0-8 7.2-14 16-14s16 6 16 14"/><path d="M14 22l-4 4 2 14h24l2-14-4-4"/></svg>
+      </div>
+      <h3 class="svc-title">Citayanos Clothing</h3>
+      <p class="svc-desc">Our flagship streetwear brand built for the 18-35 lifestyle. Music-inspired, identity-driven fashion for youth who want to stand out.</p>
+      <div class="svc-price">From R100 per item</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+    <div class="service-card reveal reveal-delay-1">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="24" rx="3"/><path d="M16 12V10a2 2 0 012-2h12a2 2 0 012 2v2"/><path d="M8 20h32M16 28h16M20 34h8"/></svg>
+      </div>
+      <h3 class="svc-title">Textile Solutions</h3>
+      <p class="svc-desc">Quality fabrics and textile products for fashion, trade, and B2B clients. Bulk orders welcome — consistency guaranteed.</p>
+      <div class="svc-price">From R200 per unit</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+    <div class="service-card reveal reveal-delay-2">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14"/><path d="M24 10V8M24 40v-2M38 24h2M8 24H6"/><circle cx="24" cy="24" r="5"/><path d="M24 19v-5M24 34v-5"/></svg>
+      </div>
+      <h3 class="svc-title">Custom Branding</h3>
+      <p class="svc-desc">Logo design, brand identity, and marketing materials that make your business unforgettable. We build brands from scratch.</p>
+      <div class="svc-price">From R300 per project</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+    <div class="service-card reveal reveal-delay-3">
+      <div class="svc-num">04</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><rect x="6" y="18" width="36" height="20" rx="3"/><path d="M12 18V12a2 2 0 012-2h20a2 2 0 012 2v6"/><circle cx="36" cy="28" r="2"/><path d="M12 32h16M12 37h10"/></svg>
+      </div>
+      <h3 class="svc-title">Custom Printing</h3>
+      <p class="svc-desc">T-shirts, hoodies, caps, banners, and more. Advanced digital printing for events, promos, and merchandise — any quantity.</p>
+      <div class="svc-price">From R350 per print run</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+    <div class="service-card reveal reveal-delay-4">
+      <div class="svc-num">05</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><path d="M12 36V24l12-12 12 12v12"/><rect x="18" y="28" width="12" height="8"/><path d="M8 36h32"/></svg>
+      </div>
+      <h3 class="svc-title">Corporate Uniforms</h3>
+      <p class="svc-desc">Branded uniforms for companies, retail teams, and schools. Your logo on every employee — a walking billboard for your brand.</p>
+      <div class="svc-price">Bulk pricing available</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+    <div class="service-card reveal reveal-delay-5">
+      <div class="svc-num">06</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 48 48"><path d="M8 40V20l16-12 16 12v20"/><path d="M18 28a6 6 0 0112 0"/><circle cx="24" cy="16" r="3"/><path d="M24 19v21"/></svg>
+      </div>
+      <h3 class="svc-title">Event Merchandise</h3>
+      <p class="svc-desc">Custom gear for concerts, sports clubs, social groups, and funerals. Matching colours, logos, and unique designs delivered fast.</p>
+      <div class="svc-price">From R100 per unit</div>
+      <a href="#contact" class="svc-cta">Get a Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--bg)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,40 C720,0 1200,60 1440,20 L1440,60 L0,60 Z" fill="#0f1520"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-copy">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-heading reveal">Born in Kagiso.<br><span>Built for Gauteng.</span></h2>
+      <div class="accent-line reveal"></div>
+      <div class="reveal">
+        <p>GH Desirable Services was founded in 2017 by Gift Mpho Holoein in Kagiso Ext 12, Krugersdorp. What started as a passion for youth culture became a full-service creative powerhouse — clothing, textiles, branding, and printing under one roof.</p>
+        <p>Our flagship brand, <strong style="color:var(--primary)">Citayanos</strong>, is a lifestyle clothing line that embodies music and entertainment — designed for the bold, the creative, and the ambitious youth of South Africa.</p>
+        <p>We're CIPC registered, SARS tax compliant, and trusted by individuals, startups, corporates, and sports clubs across the West Rand and beyond.</p>
+      </div>
+      <div class="trust-badges reveal">
+        <div class="badge">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <div class="badge-text"><strong>CIPC Registered</strong><span>Pty Ltd — legally compliant</span></div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="badge-text"><strong>Quality Guaranteed</strong><span>Every order, every time</span></div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="badge-text"><strong>Fast Turnaround</strong><span>Quotes same day</span></div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="badge-text"><strong>Transparent Pricing</strong><span>No hidden costs</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-svg-wrap">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background circle -->
+          <circle cx="200" cy="200" r="170" fill="rgba(245,197,24,0.04)" stroke="rgba(245,197,24,0.1)" stroke-width="1"/>
+          <circle cx="200" cy="200" r="130" fill="rgba(245,197,24,0.03)" stroke="rgba(245,197,24,0.08)" stroke-width="1"/>
+          <!-- Center icon -->
+          <rect x="140" y="120" width="120" height="160" rx="12" fill="rgba(245,197,24,0.08)" stroke="rgba(245,197,24,0.3)" stroke-width="1.5"/>
+          <!-- T-shirt shape -->
+          <path d="M170 150 L155 160 L165 170 L165 230 L235 230 L235 170 L245 160 L230 150 L220 160 L200 155 L180 160 Z" fill="rgba(245,197,24,0.15)" stroke="#f5c518" stroke-width="1.5" stroke-linejoin="round">
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="4s" repeatCount="indefinite"/>
+          </path>
+          <!-- Stars orbiting -->
+          <g>
+            <circle r="4" fill="#f5c518" opacity="0.8">
+              <animateMotion dur="8s" repeatCount="indefinite">
+                <mpath href="#orbit1"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <g>
+            <circle r="3" fill="#f5c518" opacity="0.5">
+              <animateMotion dur="12s" repeatCount="indefinite" begin="3s">
+                <mpath href="#orbit1"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <g>
+            <circle r="5" fill="#f5c518" opacity="0.3">
+              <animateMotion dur="10s" repeatCount="indefinite" begin="6s">
+                <mpath href="#orbit1"/>
+              </animateMotion>
+            </circle>
+          </g>
+          <defs>
+            <path id="orbit1" d="M200 60 A140 140 0 1 1 199.999 60"/>
+          </defs>
+          <!-- Text elements -->
+          <text x="200" y="310" text-anchor="middle" fill="#f5c518" font-family="Arial Black" font-size="16" font-weight="900" opacity="0.6">CITAYANOS</text>
+          <text x="200" y="328" text-anchor="middle" fill="rgba(245,197,24,0.4)" font-family="Arial" font-size="9" letter-spacing="4">EST. 2017</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--surface)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,10 C400,50 1040,0 1440,30 L1440,60 L0,60 Z" fill="#080c14"/>
+  </svg>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="process">
+  <div style="text-align:center;margin-bottom:0">
+    <p class="section-tag">How It Works</p>
+    <h2 class="section-heading reveal">Simple. Fast. <span>Done Right.</span></h2>
+    <div class="accent-line reveal" style="margin:20px auto"></div>
+  </div>
+  <div class="process-steps" id="processSteps">
+    <div class="process-line"></div>
+    <svg class="process-svg-line" id="processSvgLine" viewBox="0 0 1000 4" preserveAspectRatio="none">
+      <path id="processPath" d="M0,2 L1000,2"/>
+    </svg>
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <svg class="step-icon" viewBox="0 0 28 28"><path d="M14 3C8 3 3 8 3 14s5 11 11 11 11-5 11-11S20 3 14 3z" stroke-width="1.5"/><path d="M14 8v6l4 3" stroke-width="1.8"/></svg>
+      <h4>Reach Out</h4>
+      <p>Call, WhatsApp, or fill in our quote form — we respond same day, every day.</p>
+    </div>
+    <div class="step reveal reveal-delay-1">
+      <div class="step-num">02</div>
+      <svg class="step-icon" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" stroke-width="1.5"/><path d="M9 9h10M9 14h6M9 19h8" stroke-width="1.8"/></svg>
+      <h4>Get Your Quote</h4>
+      <p>We assess your needs and send a transparent, itemised quote with no hidden costs.</p>
+    </div>
+    <div class="step reveal reveal-delay-2">
+      <div class="step-num">03</div>
+      <svg class="step-icon" viewBox="0 0 28 28"><path d="M14 3l2.5 5.5L22 9.5l-4 4 1 5.5L14 16.5l-5 2.5 1-5.5-4-4 5.5-1z" stroke-width="1.5"/></svg>
+      <h4>We Create</h4>
+      <p>Our team designs and produces your order with meticulous attention to quality.</p>
+    </div>
+    <div class="step reveal reveal-delay-3">
+      <div class="step-num">04</div>
+      <svg class="step-icon" viewBox="0 0 28 28"><path d="M5 14l5 5 13-13" stroke-width="2" stroke-linecap="round"/></svg>
+      <h4>Delivered</h4>
+      <p>Your order is delivered on time. We follow up to ensure you're 100% satisfied.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--bg)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C360,0 1080,60 1440,20 L1440,60 L0,60 Z" fill="#0f1520"/>
+  </svg>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div style="text-align:center;margin-bottom:0">
+    <p class="section-tag">Client Reviews</p>
+    <h2 class="section-heading reveal">What Our <span>Clients Say</span></h2>
+    <div class="accent-line reveal" style="margin:20px auto"></div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="stars">
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="testi-quote">"Got custom hoodies printed for our music crew. The quality was fire — exactly what we wanted. Gift and the team delivered ahead of schedule. Citayanos vibes all the way!"</p>
+      <div class="testi-author"><strong>Thabo M.</strong><span>Kagiso, West Rand</span></div>
+    </div>
+    <div class="testi-card reveal reveal-delay-1">
+      <div class="stars">
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="testi-quote">"Ordered branded uniforms for my startup — 20 pieces. The logo came out perfect, the fabric is premium, and pricing was very fair. Definitely coming back for our next batch."</p>
+      <div class="testi-author"><strong>Nompumelelo D.</strong><span>Krugersdorp Central</span></div>
+    </div>
+    <div class="testi-card reveal reveal-delay-2">
+      <div class="stars">
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="testi-quote">"Our stokvels needed matching golf shirts for a funeral. GH Desirable sorted us out with embroidered logos in 4 days. Professional, fast, and no drama. Highly recommend."</p>
+      <div class="testi-author"><strong>Sipho K.</strong><span>Munsieville, Krugersdorp</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--surface)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,40 C480,0 960,60 1440,10 L1440,60 L0,60 Z" fill="#080c14"/>
+  </svg>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div style="text-align:center">
+    <p class="section-tag">Common Questions</p>
+    <h2 class="section-heading reveal">Got <span>Questions?</span></h2>
+    <div class="accent-line reveal" style="margin:20px auto"></div>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What's your minimum order quantity?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>We cater to all order sizes — from a single custom T-shirt to bulk corporate orders of 500+ units. Pricing is more favourable for larger quantities, and we'll always let you know when bulk pricing kicks in.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How long does an order take to complete?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Standard turnaround is 5–7 working days depending on complexity and quantity. Rush orders can be arranged — contact us directly via WhatsApp for urgent requests and we'll do our best to accommodate.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do you deliver or do I collect?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Both options are available. Collection from our Kagiso, Krugersdorp location is free. Delivery can be arranged at cost — we ship across Gauteng and nationally via courier. Get a quote for delivery rates.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I supply my own design or logo?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Absolutely. You can supply your artwork (preferably in vector/AI/PDF format) or we can design it for you as part of our branding service. Our team reviews all files before production to ensure print quality.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What payment methods do you accept?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>We accept EFT, cash, and card payments. A 50% deposit is required to confirm bulk orders, with the balance due on collection or before delivery. We'll issue a proper invoice for all transactions.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do you work with businesses, schools, and clubs?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Yes — this is a big part of what we do. We serve corporates, schools, stokvels, sports clubs, churches, and events. Any group that needs branded clothing or printed materials can work with us.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is Citayanos available to buy online?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Citayanos clothing is available directly through us. WhatsApp or call to see current stock and collections, or follow us on Instagram and Facebook for new drops. An online store is coming soon.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What if I'm not happy with my order?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-a"><p>Your satisfaction is our guarantee. If there's a quality issue or error on our side, we'll fix or replace the order at no charge. We review all jobs before delivery to minimise any issues.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="section-wave" style="background:var(--bg)">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 C600,60 900,0 1440,40 L1440,60 L0,60 Z" fill="#0f1520"/>
+  </svg>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-heading reveal">Ready to <span>Order?</span><br>Let's Talk.</h2>
+      <div class="accent-line reveal"></div>
+      <div class="reveal">
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke-width="2"/></svg></div>
+          <div class="contact-item-text"><strong>Call / WhatsApp</strong><span>067 980 0187</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke-width="2"/></svg></div>
+          <div class="contact-item-text"><strong>Location</strong><span>Kagiso Ext 12, Krugersdorp, Gauteng</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke-width="2"/></svg></div>
+          <div class="contact-item-text"><strong>Response Time</strong><span>Same day — most quotes within 2 hours</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/27679800187?text=Hi%20Gift%2C%20I%27d%20like%20to%20get%20a%20quote%20from%20GH%20Desirable%20Services" class="wa-btn reveal" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us Now
+      </a>
+    </div>
+    <div class="form-box reveal">
+      <h3>Request a Quote</h3>
+      <div id="formContent">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="fname" placeholder="Your name">
+            <div class="err-msg">Please enter your name</div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="fphone" placeholder="071 234 5678">
+            <div class="err-msg">Please enter a valid phone number</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email (optional)</label>
+          <input type="email" id="femail" placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select id="fservice">
+            <option value="">Select a service...</option>
+            <option>Citayanos Clothing</option>
+            <option>Textile Solutions</option>
+            <option>Custom Branding</option>
+            <option>Custom Printing</option>
+            <option>Corporate Uniforms</option>
+            <option>Event Merchandise</option>
+            <option>Multiple Services</option>
+          </select>
+          <div class="err-msg">Please select a service</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Area</label>
+            <input type="text" id="flocation" placeholder="e.g. Krugersdorp">
+            <div class="err-msg">Please enter your area</div>
+          </div>
+          <div class="form-group">
+            <label>Quantity (approx.)</label>
+            <input type="text" id="fqty" placeholder="e.g. 50 T-shirts">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tell us more</label>
+          <textarea id="fmessage" placeholder="Describe what you need, colours, deadline..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm()">Send My Quote Request</button>
+        <p class="trust-note">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          We respond within 2 hours during business hours
+        </p>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="26"/><polyline points="18 28 24 34 38 20" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h4>Quote Request Sent!</h4>
+        <p>We've received your request and sent you a WhatsApp message. Expect a response within 2 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo" style="margin-bottom:12px;display:inline-flex">
+        <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect width="38" height="38" rx="8" fill="#f5c518"/>
+          <text x="5" y="26" font-family="Arial Black" font-weight="900" font-size="18" fill="#000">GH</text>
+        </svg>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--primary);letter-spacing:1px;margin-left:10px">GH Desirable</span>
+      </a>
+      <p>Premium clothing, textile solutions, custom branding & printing. Empowering youth and businesses across Gauteng since 2017.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/27679800187" target="_blank" rel="noopener" class="social-link" title="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#25D366"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="var(--text)"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="var(--text)" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="var(--text)" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Citayanos Clothing</a></li>
+        <li><a href="#services">Textile Solutions</a></li>
+        <li><a href="#services">Custom Branding</a></li>
+        <li><a href="#services">Custom Printing</a></li>
+        <li><a href="#services">Corporate Uniforms</a></li>
+        <li><a href="#services">Event Merchandise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><a href="tel:0679800187">067 980 0187</a></li>
+        <li><a href="https://wa.me/27679800187" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        <li><a href="#contact">Request a Quote</a></li>
+        <li><span style="color:var(--muted);font-size:.85rem">Kagiso Ext 12,<br>Krugersdorp, Gauteng</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 GH Desirable Services · Citayanos Brand · All rights reserved</span>
+    <span>Built by <a href="#">Linket Digital</a> · <button class="admin-link" onclick="openAdmin()">Admin</button></span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <a href="tel:0679800187" class="s-call">📞 Call Now</a>
+  <a href="https://wa.me/27679800187?text=Hi%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener" class="s-wa">💬 WhatsApp</a>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/27679800187?text=Hi%20Gift%2C%20I%27d%20like%20a%20quote%20from%20GH%20Desirable%20Services" class="wa-float" target="_blank" rel="noopener" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ADMIN MODAL -->
+<div class="modal-overlay" id="adminModal" onclick="closeAdminOutside(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Admin — Lead Dashboard</h3>
+      <button class="modal-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="modal-body" id="adminBody">
+      <div class="admin-login" id="adminLogin">
+        <p>Enter admin password to view leads</p>
+        <input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')checkAdmin()">
+        <button class="btn-submit" onclick="checkAdmin()" style="margin-top:8px">Login</button>
+        <p class="admin-err" id="adminErr"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============ HERO CANVAS ============
+(function(){
+  const canvas=document.getElementById('hero-canvas');
+  const ctx=canvas.getContext('2d');
+  let w,h,particles=[];
+  function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight}
+  resize();
+  window.addEventListener('resize',resize);
+  class Particle{
+    constructor(){this.reset()}
+    reset(){
+      this.x=Math.random()*w;
+      this.y=Math.random()*h;
+      this.size=Math.random()*2+0.5;
+      this.speedX=(Math.random()-.5)*.4;
+      this.speedY=(Math.random()-.5)*.4;
+      this.opacity=Math.random()*.5+.1;
+      this.color=Math.random()>.7?'245,197,24':'255,255,255';
+    }
+    update(){
+      this.x+=this.speedX;this.y+=this.speedY;
+      if(this.x<0||this.x>w||this.y<0||this.y>h)this.reset();
+    }
+    draw(){
+      ctx.beginPath();
+      ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${this.color},${this.opacity})`;
+      ctx.fill();
+    }
+  }
+  for(let i=0;i<120;i++)particles.push(new Particle());
+  // Draw connecting lines
+  function drawLines(){
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx=particles[i].x-particles[j].x;
+        const dy=particles[i].y-particles[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<120){
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x,particles[i].y);
+          ctx.lineTo(particles[j].x,particles[j].y);
+          ctx.strokeStyle=`rgba(245,197,24,${.06*(1-dist/120)})`;
+          ctx.lineWidth=.5;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+  function animate(){
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{p.update();p.draw()});
+    drawLines();
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// ============ NAV SCROLL ============
+window.addEventListener('scroll',function(){
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+  const bar=document.getElementById('stickyBar');
+  bar.style.display=window.scrollY>200?'flex':'none';
+},{ passive:true });
+
+// ============ MOBILE NAV ============
+function toggleMenu(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ============ REVEAL ON SCROLL ============
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      if(entry.target.classList.contains('accent-line'))
+        entry.target.classList.add('animated');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+// ============ COUNT UP STATS ============
+function countUp(el){
+  const target=+el.dataset.target;
+  const suffix=el.dataset.suffix||'';
+  const duration=1200;
+  const step=Math.ceil(target/60);
+  let current=0;
+  const timer=setInterval(()=>{
+    current=Math.min(current+step,target);
+    el.textContent=current+suffix;
+    if(current>=target)clearInterval(timer);
+  },duration/60);
+}
+const statsObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll('.stat-num').forEach(countUp);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.5});
+const statsEl=document.getElementById('stats');
+if(statsEl)statsObserver.observe(statsEl);
+
+// ============ PROCESS LINE ============
+const processObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const path=document.getElementById('processPath');
+      if(path){
+        const len=path.getTotalLength();
+        path.style.strokeDasharray=len;
+        path.style.strokeDashoffset=len;
+        path.classList.add('drawn');
+      }
+      processObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.3});
+const procEl=document.getElementById('processSteps');
+if(procEl)processObserver.observe(procEl);
+
+// ============ FAQ ============
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+
+// ============ FORM SUBMIT ============
+function validateField(id,check){
+  const el=document.getElementById(id);
+  const grp=el.closest('.form-group');
+  const valid=check(el.value.trim());
+  grp.classList.toggle('has-error',!valid);
+  el.classList.toggle('error',!valid);
+  return valid;
+}
+function submitForm(){
+  const n=validateField('fname',v=>v.length>1);
+  const p=validateField('fphone',v=>v.replace(/\D/g,'').length>=9);
+  const s=validateField('fservice',v=>v!=='');
+  const l=validateField('flocation',v=>v.length>1);
+  if(!n||!p||!s||!l)return;
+  const lead={
+    id:Date.now(),
+    name:document.getElementById('fname').value.trim(),
+    phone:document.getElementById('fphone').value.trim(),
+    email:document.getElementById('femail').value.trim(),
+    service:document.getElementById('fservice').value,
+    location:document.getElementById('flocation').value.trim(),
+    quantity:document.getElementById('fqty').value.trim(),
+    message:document.getElementById('fmessage').value.trim(),
+    date:new Date().toISOString(),
+    status:'new'
+  };
+  const leads=JSON.parse(localStorage.getItem('crm_leads')||'[]');
+  leads.push(lead);
+  localStorage.setItem('crm_leads',JSON.stringify(leads));
+  const msg=encodeURIComponent(
+    `🎽 New Quote Request — GH Desirable Services\n\nName: ${lead.name}\nPhone: ${lead.phone}\nService: ${lead.service}\nLocation: ${lead.location}\nQty: ${lead.quantity||'Not specified'}\nMessage: ${lead.message||'No message'}`
+  );
+  window.open(`https://wa.me/27679800187?text=${msg}`,'_blank');
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+
+// ============ ADMIN ============
+function openAdmin(){document.getElementById('adminModal').classList.add('open')}
+function closeAdmin(){document.getElementById('adminModal').classList.remove('open')}
+function closeAdminOutside(e){if(e.target===document.getElementById('adminModal'))closeAdmin()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAdmin()});
+
+function checkAdmin(){
+  const pass=document.getElementById('adminPass').value;
+  if(pass==='gh2024'){
+    document.getElementById('adminLogin').style.display='none';
+    document.getElementById('adminBody').innerHTML=buildCRM();
+  } else {
+    document.getElementById('adminErr').textContent='Incorrect password. Try again.';
+  }
+}
+
+function buildCRM(){
+  const leads=JSON.parse(localStorage.getItem('crm_leads')||'[]');
+  const byStatus={new:0,contacted:0,quoted:0,won:0,lost:0};
+  leads.forEach(l=>byStatus[l.status]=(byStatus[l.status]||0)+1);
+  let html=`
+    <div class="crm-stats">
+      <div class="crm-stat"><strong>${leads.length}</strong>Total Leads</div>
+      <div class="crm-stat"><strong style="color:var(--primary)">${byStatus.new}</strong>New</div>
+      <div class="crm-stat"><strong style="color:#27ae60">${byStatus.won}</strong>Won</div>
+      <div class="crm-stat"><strong style="color:#e74c3c">${byStatus.lost}</strong>Lost</div>
+    </div>
+    <div class="crm-actions">
+      <button class="btn-sm btn-export" onclick="exportCSV()">Export CSV</button>
+      <button class="btn-sm btn-clear" onclick="clearAllLeads()">Clear All</button>
+    </div>`;
+  if(leads.length===0){
+    html+=`<div class="empty-state">No leads yet. Submit a form to see them here.</div>`;
+  } else {
+    html+=`<div style="overflow-x:auto"><table class="leads-table">
+      <thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Service</th><th>Area</th><th>Date</th><th>Status</th><th></th></tr></thead>
+      <tbody>`;
+    leads.forEach((l,i)=>{
+      const d=new Date(l.date).toLocaleDateString('en-ZA');
+      html+=`<tr>
+        <td>${i+1}</td>
+        <td><strong>${l.name}</strong><br><span style="font-size:.75rem;color:var(--muted)">${l.email||''}</span></td>
+        <td><a href="tel:${l.phone}" style="color:var(--primary);text-decoration:none">${l.phone}</a></td>
+        <td>${l.service}</td>
+        <td>${l.location}</td>
+        <td>${d}</td>
+        <td>
+          <select class="status-sel" onchange="updateStatus(${l.id},this.value)">
+            <option value="new" ${l.status==='new'?'selected':''}>New</option>
+            <option value="contacted" ${l.status==='contacted'?'selected':''}>Contacted</option>
+            <option value="quoted" ${l.status==='quoted'?'selected':''}>Quoted</option>
+            <option value="won" ${l.status==='won'?'selected':''}>Won</option>
+            <option value="lost" ${l.status==='lost'?'selected':''}>Lost</option>
+          </select>
+        </td>
+        <td><button class="del-btn" onclick="deleteLead(${l.id})">🗑</button></td>
+      </tr>`;
+    });
+    html+=`</tbody></table></div>`;
+  }
+  return html;
+}
+
+function updateStatus(id,status){
+  const leads=JSON.parse(localStorage.getItem('crm_leads')||'[]');
+  const idx=leads.findIndex(l=>l.id===id);
+  if(idx>-1){leads[idx].status=status;localStorage.setItem('crm_leads',JSON.stringify(leads));}
+}
+
+function deleteLead(id){
+  if(!confirm('Delete this lead?'))return;
+  const leads=JSON.parse(localStorage.getItem('crm_leads')||'[]').filter(l=>l.id!==id);
+  localStorage.setItem('crm_leads',JSON.stringify(leads));
+  document.getElementById('adminBody').innerHTML=buildCRM();
+}
+
+function clearAllLeads(){
+  if(!confirm('Delete ALL leads? This cannot be undone.')||!confirm('Are you sure? All lead data will be lost.'))return;
+  localStorage.removeItem('crm_leads');
+  document.getElementById('adminBody').innerHTML=buildCRM();
+}
+
+function exportCSV(){
+  const leads=JSON.parse(localStorage.getItem('crm_leads')||'[]');
+  if(!leads.length){alert('No leads to export.');return;}
+  const headers=['ID','Name','Phone','Email','Service','Location','Quantity','Message','Date','Status'];
+  const rows=leads.map(l=>[l.id,l.name,l.phone,l.email,l.service,l.location,l.quantity,l.message,l.date,l.status].map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','));
+  const csv=[headers.join(','),...rows].join('\n');
+  const blob=new Blob([csv],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`GH_Desirable_Leads_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+}
+
+// ============ REDUCED MOTION ============
+if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+  document.querySelectorAll('.hero-orb,[style*="animation"]').forEach(el=>el.style.animation='none');
+}
+</script>
+</body>
+</html>
